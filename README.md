@@ -1,2 +1,2 @@
 # notes
-vimrc, bashrc, git notes, etc.
+useful commands, files and notes.
