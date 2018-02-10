@@ -16,3 +16,5 @@
 
 # first thing to do to get repo
     git clone /path/to/repository
+# status
+    git status
