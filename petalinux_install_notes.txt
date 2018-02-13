@@ -41,4 +41,4 @@ install screen
 install pax
 install gzip
 
-
+sudo dpkg-reconfigure dash
