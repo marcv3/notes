@@ -1,0 +1,7 @@
+#configure /bin/sh to bash
+sudo dpkg-reconfigure dash
+
+#every time we open a new terminal, from the petalinux directory, run
+source ./settings.sh
+
+
