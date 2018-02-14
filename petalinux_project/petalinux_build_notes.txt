@@ -6,4 +6,5 @@ source ./settings.sh
 echo $PETALINUX
 
 #create a new petalinux project
-
+petalinux-create --type project --template zynq --name zybo
+petalinux-config --get-hw-description=~/code/vivado_projects/petalinux0/petalinux0.sdk
