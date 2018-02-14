@@ -5,4 +5,5 @@ sudo dpkg-reconfigure dash
 source ./settings.sh
 echo $PETALINUX
 
+#create a new petalinux project
 

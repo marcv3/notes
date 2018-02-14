@@ -2,7 +2,12 @@
 <vivado dir>/settings64.sh
 echo $XILINX_VIVADO
 
-# steps to create design after blocks are in place (Zynq block, Run Connection Automation, etc.)
+# get board files if necessary. Zybo from the following website
+https://reference.digilentinc.com/reference/software/vivado/board-files
+merge "board_files" dir with $XILINX_VIVADO/data/boards/board_files
+
+
+# steps to create design after blocks are in place (create block design)
 1. Create HDL wrapper
 2. Generate output products
 3. Validate
