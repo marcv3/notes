@@ -1,0 +1,9 @@
+# steps to create design after blocks are in place (Zynq block, Run Connection Automation, etc.)
+1. Create HDL wrapper
+2. Generate output products
+3. Validate
+4. Synthesize
+5. Implementation
+6. Generate bit stream
+7. Export hardware (check include bitstream)
+8. .hdf and .bit files are located in .sdk folder
