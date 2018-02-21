@@ -6,5 +6,16 @@ source ./settings.sh
 echo $PETALINUX
 
 #create a new petalinux project
-petalinux-create --type project --template zynq --name zybo
-petalinux-config --get-hw-description=~/code/vivado_projects/petalinux0/petalinux0.sdk
+petalinux-create --type project --template zynq --name <specify name> --source ./Petalinux-Zybo-2017.2-1.bsp
+petalinux-config --get-hw-description ~/code/vivado_projects/<project>/<project>.sdk
+petalinux-build
+petalinux-package --boot --force --fsbl ./images/linux/zynq_fsbl.elf --fpga ./images/linux/design_1_wrapper.bit --u-boot
+cp images/linux/BOOT.BIN /media/marc/boot
+cp images/linux/image.ub /media/marc/boot
+sudo umount /dev/sdb2
+sudo dd if=images/linux/rootfs.ext4 of=/dev/sdb2
+sync
+sudo resize2fs /dev/sdb2
+sync
+
+
