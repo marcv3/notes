@@ -1,43 +1,44 @@
 #requires python 3.4.0
 #I am using python 3.5.x, created alias python="python3" to make sure I am using the 3 version
 
-install tofrodos
-install iproute2
-install gawk
-install xvfb
-install git
+sudo apt-get install tofrodos
+sudo apt-get install iproute2
+sudo apt-get install gawk
+sudo apt-get install xvfb
+sudo apt-get install git
 # requires make 3.81, I am using make 4.1
-install net-tools
-install libncurses5-dev
-install tftpd
-install zlib1g-dev # how do I get 32 bit version of this?
+sudo apt-get install net-tools
+sudo apt-get install libncurses5-dev
+sudo apt-get install tftpd
+sudo apt-get install zlib1g-dev # how do I get 32 bit version of this?
 #downloaded zlib1g-dev_1.2.8.dfsg-2ubuntu4_i386.deb
-# ran install zlib1g-dev:i386
+# ran sudo apt-get install zlib1g-dev:i386
 # dpkg --add-architecture i386
 # update
 # install zlib1g-dev:i386
 # sudo apt-get install ncurses-dev:i386 libstdc++6:i386 libselinux1:i386 lib32ncurses5-dev lib32ncurses5 lib32ncursesw5
-install libssl-dev
-install flex
-install bison
-install libselinux1
-install gnupg
-install wget
-install diffstat
-install chrpath
-install socat
-install xterm
-install autoconf
-install libtool
+sudo apt-get install libssl-dev
+sudo apt-get install flex
+sudo apt-get install bison
+sudo apt-get install libselinux1
+sudo apt-get install gnupg
+sudo apt-get install wget
+sudo apt-get install diffstat
+sudo apt-get install chrpath
+sudo apt-get install socat
+sudo apt-get install xterm
+sudo apt-get install autoconf
+sudo apt-get install libtool
 # requires tar:1.24, I am using tar 1.28
-install unzip
-install texinfo
-install zlib1g-dev
-install gcc-multilib
-install build-essential
-install libsdl1.2-dev
-install libglib2.0-dev 
-install screen
-install pax
-install gzip
+sudo apt-get install unzip
+sudo apt-get install texinfo
+sudo apt-get install zlib1g-dev
+sudo apt-get install gcc-multilib
+sudo apt-get install build-essential
+sudo apt-get install libsdl1.2-dev
+sudo apt-get install libglib2.0-dev 
+sudo apt-get install screen
+sudo apt-get install pax
+sudo apt-get install gzip
 
+sudo apt-get install tofrodos iproute2 gawk xvfb git net-tools libncurses5-dev tftpd zlib1g-dev zlib1g-dev:i386 libssl-dev flex bison libselinux1 gnupg wget diffstat chrpath socat xterm autoconf libtool unzip texinfo zlib1g-dev gcc-multilib build-essential libsdl1.2-dev libglib2.0-dev screen pax gzip
