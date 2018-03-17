@@ -8,8 +8,11 @@ echo $PETALINUX
 #create a new petalinux project
 petalinux-create --type project --template zynq --name <specify name> --source ./Petalinux-Zybo-2017.2-1.bsp
 petalinux-config --get-hw-description ~/code/vivado_projects/<project>/<project>.sdk
+gvim project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi
+# change line to
+bootargs = "console=ttyPS0,115200 earlyprintk uio_pdrv_genirq.of_id=generic-uio root=/dev/mmcblk0p2 rw rootwait";
 petalinux-build
-petalinux-package --boot --force --fsbl ./images/linux/zynq_fsbl.elf --fpga ./images/linux/design_1_wrapper.bit --u-boot
+petalinux-package --boot --force --fsbl ./images/linux/zynq_fsbl.elf --fpga ./images/linux/system_wrapper.bit --u-boot
 cp images/linux/BOOT.BIN /media/marc/boot
 cp images/linux/image.ub /media/marc/boot
 sudo umount /dev/sdb2
